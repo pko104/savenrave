@@ -12,20 +12,21 @@
  *
  *= require_tree .
  *= require_self
-
+ *= require_foundation_and_overrides
  */
 
-body > nav {
-  background-color: transparent !important;
- }
+body > nav{
+  background-color: rgba(0,0,0,0.7) !important;
+}
 
 .top-bar-section ul li a{
 
-  background-color: transparent !important;
+  background-color: rgba(0,0,0,0.4) !important;
 }
 
 .top-bar-section ul li {
-  background-color: rgba(333,333,333,0.1) !important;
+  color:black;
+  background-color: rgba(333,333,333,0.4) !important;
 }
 
 div.logo-tag {
@@ -44,4 +45,3 @@ div.login {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
