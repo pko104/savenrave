@@ -15,6 +15,13 @@
  *= require_foundation_and_overrides
  */
 
+body {
+    background-image: url("background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
 body > nav{
   background-color: rgba(0,0,0,0.7) !important;
 }
