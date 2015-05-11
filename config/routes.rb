@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'events#index'
 
+  resources :profile_pages, only: [:show, :destroy]
+
   resources :events, only: [:index, :create, :new, :show, :destroy] do
     resources :tickets, only: [:create, :new, :show, :destroy] do
       resources :bids, only: [:new, :create, :destroy]
