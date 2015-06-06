@@ -69,7 +69,7 @@
   <div id="myModal" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
     <h2 id="modalTitle">Sell Your Ticket</h2>
 
-                <form data-abide method="post" action="index.php">
+                <%=form_for @new_ticket do |f|%>
 
                   <fieldset>
 
@@ -98,9 +98,10 @@
                       <button type="submit" value="send">Submit</button>
 
                   </fieldset>
-                </form>
+                <%end%>
 
-          <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+
+                   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
   </div>
 
   <script src="assets/foundation.js"></script>
