@@ -1,5 +1,5 @@
 <%= form_for search_path, method: :get do |f| %>
-  <%= f.label 'Search for city' %>
+  <%= f.label 'Search for event' %>
   <%= text_field_tag :q, params[:q] %>
   <%= submit_tag "Search", name: nil %>
 <% end %>

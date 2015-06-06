@@ -7,6 +7,15 @@ class ApplicationController < ActionController::Base
 
   def nav_bar
     @new_ticket = Ticket.new
+
+    if params[:q]
+      if params[:q] == ""
+        redirect_to "/search", notice: "You must input a character"
+      else
+        @event = params[:q]
+        redirect_to "/search", action: "search", q: @event
+      end
+    end
   end
 
 end
