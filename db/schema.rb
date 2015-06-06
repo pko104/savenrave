@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150606054748) do
+ActiveRecord::Schema.define(version: 20150606081507) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20150606054748) do
   create_table "events", force: :cascade do |t|
     t.integer "date", null: false
     t.integer "time", null: false
+    t.string  "name"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -39,6 +40,8 @@ ActiveRecord::Schema.define(version: 20150606054748) do
   end
 
   create_table "private_messages", force: :cascade do |t|
+    t.string  "description", null: false
+    t.integer "user_id",     null: false
   end
 
   create_table "profile_pages", force: :cascade do |t|
@@ -46,14 +49,11 @@ ActiveRecord::Schema.define(version: 20150606054748) do
   end
 
   create_table "tickets", force: :cascade do |t|
-    t.integer "eventdate",   null: false
-    t.integer "eventtime",   null: false
-    t.integer "postdate",    null: false
-    t.integer "enddate",     null: false
-    t.integer "price",       null: false
-    t.integer "chatroom_id", null: false
-    t.integer "bid_id",      null: false
-    t.integer "user_id",     null: false
+    t.integer "event_id", null: false
+    t.integer "postdate", null: false
+    t.integer "enddate",  null: false
+    t.integer "price",    null: false
+    t.integer "user_id",  null: false
   end
 
   create_table "users", force: :cascade do |t|

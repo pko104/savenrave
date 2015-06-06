@@ -29,7 +29,7 @@
               <a href="#">Tickets</a>
               <ul class="dropdown">
                 <li><label>Selling</label></li>
-                <li><a href="#" data-reveal-id="myModal">Sell A Ticket</a></li>
+                <li><a href="#" data-reveal-id="firstModal">Sell A Ticket</a></li>
                 <li><a href="#">My Tickets</a></li>
                 <li class="divider"></li>
                 <li><label>Buying</label></li>
@@ -66,43 +66,64 @@
         </section>
       </nav>
 
-  <div id="myModal" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-    <h2 id="modalTitle">Sell Your Ticket</h2>
-
-                <%=form_for @new_ticket do |f|%>
-
-                  <fieldset>
-
-                     <div class="event-field">
-                        <label for="event">Name of Event <small>required</small></label>
-                          <input type="event" name="event" id="event">
-                        <small class="error">Name is required.</small>
-                      </div>
-
-                      <div class="loc-field">
-                        <label for="location">Location <small>required</small></label>
-                          <input type="location" name="location" id="location" required>
-                        <small class="error">A location is required.</small>
-                      </div>
-
-                      <div class="time-field">
-                        <label for="time">Event Time</label>
-                          <input type="time" name="time" id="time">
-                      </div>
-
-                      <div class="date-field">
-                        <label for="date">Event Date</label>
-                          <input type="date" name="date" id="date">
-                      </div>
-
-                      <button type="submit" value="send">Submit</button>
-
-                  </fieldset>
-                <%end%>
-
-
-                   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+    <div id="firstModal" class="reveal-modal small" data-reveal aria-labelledby="firstModalTitle" aria-hidden="true" role="dialog">
+    <h2 id="firstModalTitle">Which Event?</h2>
+       <%= form_for search_path, method: :get do |f| %>
+      <%= text_field_tag :q, params[:q] %>
+      <%= submit_tag "Search", name: nil %>
+    <% end %>
+    <p><a href="#" data-reveal-id="secondModal" class="secondary button">Second Modal...</a></p>
+    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
   </div>
+
+  <div id="secondModal" class="reveal-modal" data-reveal aria-labelledby="secondModalTitle" aria-hidden="true" role="dialog">
+    <h2 id="secondModalTitle">This is a second modal.</h2>
+    <p>See? It just slides into place after the other first modal. Very handy when you need subsequent dialogs, or when a modal option impacts or requires another decision.</p>
+    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+  </div>
+
+<div>
+
+<!--
+      <%=form_for @new_ticket do |f|%>
+
+        <fieldset>
+
+           <div class="event-field">
+           <%= f.label :event_id, "Name of Event"%>
+           <%= f.text_field :event_id%>
+           </div>
+
+           <div class="loc-field">
+           <%= f.label :event_id, "Name of Event"%>
+           <%= f.text_field :event_id%>
+           </div>
+
+            <div class="loc-field">
+              <label for="location">Location <small>required</small></label>
+                <input type="location" name="location" id="location" required>
+              <small class="error">A location is required.</small>
+            </div>
+
+            <div class="time-field">
+              <label for="time">Event Time</label>
+                <input type="time" name="time" id="time">
+            </div>
+
+            <div class="date-field">
+              <label for="date">Event Date</label>
+                <input type="date" name="date" id="date">
+            </div>
+
+            <button type="submit" value="send">Submit</button>
+
+        </fieldset>
+      <%end%>
+
+
+      <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+  </div>
+  -->
 
   <script src="assets/foundation.js"></script>
   <script src="assets/foundation/foundation.reveal.js"></script>

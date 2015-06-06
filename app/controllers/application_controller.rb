@@ -3,9 +3,9 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  before_filter :ticket
+  before_filter :nav_bar
 
-  def ticket
+  def nav_bar
     @new_ticket = Ticket.new
   end
 

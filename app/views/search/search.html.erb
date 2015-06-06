@@ -1,0 +1,14 @@
+<%= form_for search_path, method: :get do |f| %>
+  <%= f.label 'Search for city' %>
+  <%= text_field_tag :q, params[:q] %>
+  <%= submit_tag "Search", name: nil %>
+<% end %>
+
+<%if @events%>
+  <% @events.each do |event| %>
+    <br>
+      <%= event.date %>
+      <%#= link_to "#{city.name} (#{country_name})", country_city_path(country_id, city)%>
+    </br>
+  <%end%>
+<%end%>
