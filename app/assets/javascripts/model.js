@@ -1,7 +1,8 @@
-// trigger by event
-$('a.reveal-link').trigger('click');
-$('a.close-reveal-modal').trigger('click');
+jQuery(document).ready(function(){
+     jQuery(document).foundation();
+   jQuery('#dd').click(function(){
+   jQuery('#myModal').foundation('reveal', 'open');
+   });
 
-// or directly on the modal
-$('#myModal').foundation('reveal', 'open');
-$('#myModal').foundation('reveal', 'close');
+
+   });
