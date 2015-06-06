@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -7,11 +8,12 @@ Rails.application.routes.draw do
 
   resources :profile_pages, only: [:show, :destroy]
 
-  resources :events, only: [:index, :create, :new, :show, :destroy] do
-    resources :tickets, only: [:create, :new, :show, :destroy] do
-      resources :bids, only: [:new, :create, :destroy]
-    end
+  resources :events, only: [:index, :create, :new, :show, :destroy]
+
+  resources :tickets, only: [:create, :new, :show, :destroy] do
+    resources :bids, only: [:new, :create, :destroy]
   end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
