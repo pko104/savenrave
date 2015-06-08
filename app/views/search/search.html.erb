@@ -1,3 +1,17 @@
+<%="Event Doesn't Exist?"%>
+
+  <button style= "text:white">
+    <a href="#" data-reveal-id="firstModal">Create An Event</a>
+  </button>
+    <div id="firstModal" class="reveal-modal small" data-reveal aria-labelledby="firstModalTitle" aria-hidden="true" role="dialog">
+    <h2 id="firstModalTitle">Create An Event</h2>
+       <%= form_for new_event_path do |f| %>
+      <%= date_field :date%>
+      <%= time_field :time%>
+      <%= submit_tag "Submit"%>
+    <% end %>
+    </div>
+
 <%= form_for search_path, method: :get do |f| %>
   <%= f.label 'Search for event' %>
   <%= text_field_tag :q, params[:q] %>
