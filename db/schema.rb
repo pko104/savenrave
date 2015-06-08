@@ -28,9 +28,9 @@ ActiveRecord::Schema.define(version: 20150606081507) do
   end
 
   create_table "events", force: :cascade do |t|
-    t.integer "date", null: false
-    t.integer "time", null: false
-    t.string  "name"
+    t.date   "date", null: false
+    t.time   "time", null: false
+    t.string "name"
   end
 
   create_table "messages", force: :cascade do |t|
