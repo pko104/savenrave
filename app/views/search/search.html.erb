@@ -6,7 +6,7 @@
     <h2 id="firstModalTitle">Create An Event</h2>
        <%= form_for new_event_path do |f| %>
         <%= f.label "Name of Event"%>
-        <%= f.text_field "name of event"%>
+        <%= f.text_field :name%>
         <%= f.date_field :date, :start_year => Date.current%>
         <%= f.time_field :time, :start_time => Time.current%>
       <%= submit_tag "Submit"%>
