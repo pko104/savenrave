@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
 
   def nav_bar
     @new_ticket = Ticket.new
+    @new_event = Event.new
 
     if params[:q]
       if params[:q] == ""

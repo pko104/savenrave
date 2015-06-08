@@ -3,8 +3,8 @@
   <a href="#" data-reveal-id="eventModal" class="button">Create An Event</a>
 
     <div id="eventModal" class="reveal-modal small" data-reveal aria-labelledby="eventModalTitle" aria-hidden="true" role="dialog">
-    <h2 id="firstModalTitle">Create An Event</h2>
-       <%= form_for new_event_path do |f| %>
+    <h2 id="eventModalTitle">Create An Event</h2>
+       <%= form_for @new_event do |f| %>
         <%= f.label "Name of Event"%>
         <%= f.text_field :name%>
         <%= f.date_field :date, :start_year => Date.current%>

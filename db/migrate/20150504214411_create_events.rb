@@ -1,8 +1,8 @@
 class CreateEvents < ActiveRecord::Migration
   def change
     create_table :events do |t|
-      t.integer :date, null: false
-      t.integer :time, null: false
+      t.date :date, null: false
+      t.time :time, null: false
     end
   end
 end
