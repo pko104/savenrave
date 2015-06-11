@@ -4,7 +4,7 @@
 
     <div id="eventModal" class="reveal-modal small" data-reveal aria-labelledby="eventModalTitle" aria-hidden="true" role="dialog">
     <h2 id="eventModalTitle">Create An Event</h2>
-       <%= form_for @new_event do |f| %>
+       <%= form_for @new_event, method: :post do |f| %>
         <%= f.label "Name of Event"%>
         <%= f.text_field :name%>
         <%= f.label "Location"%>
