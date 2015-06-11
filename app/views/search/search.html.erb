@@ -7,6 +7,8 @@
        <%= form_for @new_event do |f| %>
         <%= f.label "Name of Event"%>
         <%= f.text_field :name%>
+        <%= f.label "Location"%>
+        <%= f.text_field :location%>
         <%= f.date_field :date, :start_year => Date.current%>
         <%= f.time_field :time, :start_time => Time.current%>
       <%= submit_tag "Submit"%>
