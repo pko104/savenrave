@@ -24,8 +24,9 @@
 <%if @events%>
   <% @events.each do |event| %>
     <br>
-      <%= event.date %>
+      <%= event %>
       <%#= link_to "#{city.name} (#{country_name})", country_city_path(country_id, city)%>
     </br>
   <%end%>
 <%end%>
+

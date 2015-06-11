@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
   def search
     if params[:q]
-      if params[:q] == ""
+      if params[:q]== ""
         @events = []
         redirect_to "/search", notice: "You must input a character"
       else
@@ -9,5 +9,4 @@ class SearchController < ApplicationController
       end
     end
   end
-
 end
