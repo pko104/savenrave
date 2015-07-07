@@ -26,11 +26,12 @@
     <br>
       <div style ="position:center; left: -200px; margin: auto;width: 4px;height:300px; width: 1000px; top: 25px; background:white;border:20px solid white">
   <div style ="position:relative; left:150px">
-    <a href="#"><img src="http://placehold.it/300x240&text=[img]"/></a>
+    <a href="/events/#{event}"><img src="http://placehold.it/300x240&text=[img]"/></a>
   </div>
   <div style ="position:relative; left:25px; top:-225px">
+
     <h3>
-      <%="Event"%>
+      <%= link_to "Event", event_path(event)%>
     </h3>
       <div>
         <%=event.name.split.map(&:capitalize)*' '%>
