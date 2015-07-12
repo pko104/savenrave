@@ -11,6 +11,7 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @new_ticket = Ticket.new()
   end
 
   def network
@@ -49,6 +50,9 @@ class EventsController < ApplicationController
   end
 end
 
+  def ticket_params
+    params.require(:event).permit(:name, :location, :date, :time)
+  end
 
   def event_params
     params.require(:event).permit(:name, :location, :date, :time)
