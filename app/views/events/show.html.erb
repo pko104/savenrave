@@ -91,11 +91,11 @@
       <a href="#" data-reveal-id="ticketModal" class="button">Sell A Ticket</a>
 
     <div id="ticketModal" class="reveal-modal small" data-reveal aria-labelledby="eventModalTitle" aria-hidden="true" role="dialog">
-    <h2 id="ticketModalTitle">Create An Event</h2>
+    <h2 id="ticketModalTitle">Sell An Ticket</h2>
        <%= form_for @new_ticket, method: :post do |f| %>
-        <%= f.label "Ticket name"%>
-
-      <%= submit_tag "Submit"%>
+        <%= f.label "Price"%>
+        <%= f.text_field :price%>
+        <%= submit_tag "Submit"%>
     <% end %>
     </div>
 

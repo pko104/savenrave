@@ -50,10 +50,6 @@ class EventsController < ApplicationController
   end
 end
 
-  def ticket_params
-    params.require(:event).permit(:name, :location, :date, :time)
-  end
-
   def event_params
     params.require(:event).permit(:name, :location, :date, :time)
   end
