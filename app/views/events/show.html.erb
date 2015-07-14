@@ -94,7 +94,9 @@
     <h2 id="ticketModalTitle">Sell An Ticket</h2>
      <div class="modal-body">
         <%event_name = Event.find(params[:id])%>
-        <%=event_name.name.split.map(&:capitalize)*' '%>
+        <h3>
+          <%=event_name.name.split.map(&:capitalize)*' '%>
+        </h3>
       </div>
        <%= form_for @new_ticket, method: :post do |f| %>
         <%= f.hidden_field :event_id, :value => "#{@event.id}" %>
