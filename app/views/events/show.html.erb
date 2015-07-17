@@ -1,3 +1,4 @@
+<body>
 <div style ="position:relative; left: -300px; margin: auto;width: 4px;height:300px; width: 500px; top: 25px; background:white;border:20px solid white">
   <div style ="position:relative; left:150px">
     <a href="#"><img src="http://placehold.it/300x240&text=[img]"/></a>
@@ -88,9 +89,31 @@
 
     </div>
 
-      <a href="#" data-reveal-id="ticketModal" class="button">Sell A Ticket</a>
+<div id= "ticket-box" style ="position:relative; left: -300px; margin: auto;width: 4px;height:275px; width: 490px; top: -550px; background:white;border:20px solid white">
+  <div style ="left:25px; top:-225px">
+    <h3>
+      <%="Tickets"%>
+    </h3>
 
-    <div id="ticketModal" class="reveal-modal small" data-reveal aria-labelledby="eventModalTitle" aria-hidden="true" data-target="#ticketModal" role="dialog" id="#{@event.id}">
+    <a href="#" data-reveal-id="ticketModal" class="button">Sell A Ticket</a>
+  <div>
+
+  <div style ="position:relative;left:200px;top:-75px;">
+    <div id ="event-tickets">
+      <%if @tickets%>
+        <%@tickets.each do |t|%>
+          <div>
+            <%=t.price%>
+          </div>
+        <%end%>
+      <%end%>
+    </div>
+  </div>
+
+</div>
+</body>
+
+<div id="ticketModal" class="reveal-modal small" data-reveal aria-labelledby="eventModalTitle" aria-hidden="true" data-target="#ticketModal" role="dialog" id="#{@event.id}">
     <h2 id="ticketModalTitle">Sell An Ticket</h2>
      <div class="modal-body">
         <%event_name = Event.find(params[:id])%>
@@ -109,15 +132,6 @@
         <%= submit_tag "Submit"%>
     <% end %>
     </div>
-
-  <div id ="event-tickets">
-    <%if @tickets%>
-      <%@tickets.each do |t|%>
-        <%=t.price%>
-      <%end%>
-    <%end%>
-  </div>
-
 
   <script src="assets/foundation.js"></script>
   <script src="assets/foundation/foundation.reveal.js"></script>
