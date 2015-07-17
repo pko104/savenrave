@@ -1,4 +1,4 @@
-<body>
+<body style = "background:#FFF">
   <div style ="position:relative; left: -300px; margin: auto;width: 4px;height:300px; width: 500px; top: 25px; background:white;border:20px solid white">
     <div style ="position:relative; left:150px">
       <a href="#">
@@ -21,9 +21,9 @@
         <div>
           <%=@event.date.strftime("%m/%d/%Y")%>
         </div>
-        <div>
-          <%=@event.time.strftime("%I:%M%p")%>
-        </div>
+          <div>
+            <%=@event.time.strftime("%I:%M%p")%>
+          </div>
       </div>
     </div>
   </div>
