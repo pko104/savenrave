@@ -23,7 +23,6 @@ body {
     background-attachment: fixed;
 }
 
-
 body > nav{
   background-color: rgba(0,0,0,0.3) !important;
 }
@@ -54,3 +53,28 @@ div.login {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+.btn-primary.raised {
+    box-shadow: 0 3px 0 0 #009900;
+    background: #00CC66;
+}
+
+.btn-primary.raised:hover {
+    background: #00FC00;
+    box-shadow: 0 3px 0 0 #00FC00;
+}
+
+.btn-primary.raised:active, .btn-primary.raised.active {
+    background: #00FF00;
+    box-shadow: none;
+    margin-bottom: -3px;
+    margin-top: 3px;
+}
+
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}

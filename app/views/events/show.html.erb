@@ -102,12 +102,16 @@
   <div>
 
   <div style ="position:relative;left:200px;top:-75px;">
-    <div id ="event-tickets">
+    <div id ="event-tickets" style="overflow: scroll; height:200px">
       <%if @tickets%>
         <%@tickets.each do |t|%>
-          <div>
-            <%=t.price%>
-          </div>
+              <ul>
+                <%="Kevin Baker: 1 ticket"%>
+              </ul>
+              <ul>
+                <button type="button" class="btn btn-primary btn-lg raised">Bid</button>
+                <%="$#{t.price}"%>
+              </ul>
         <%end%>
       <%end%>
     </div>
