@@ -14,6 +14,10 @@
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <%= content_for :extra_footer do %>
+  <%= stylesheet_link_tag 'bootstrap' %>
+<% end %>
+
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
 
