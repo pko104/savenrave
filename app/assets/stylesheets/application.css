@@ -13,11 +13,11 @@
  *= require_tree .
  *= require_self
  *= require foundation_and_overrides
-
  *= require_foundation_and_overrides
  */
 
 body {
+    background-image: url("sun.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -30,17 +30,21 @@ h1{ text-align: center;
 }
 
 body > nav{
-  background-color: rgba(0,0,0,0.9) !important;
+  background-color: rgba(10,0,0,0.9) !important;
 }
 
 .top-bar-section ul li a{
 
-  background-color: rgba(0,0,0,0.9) !important;
+  color:orange;
+  background-color: rgba(10,0,0,0.2) !important;
+}
+
+.has-dropdown {
+  background-color: rgba(10,0,0,0.9) !important;
 }
 
 .top-bar-section ul li {
-  color:black;
-  background-color: rgba(333,333,333,0.4) !important;
+  background-color: rgba(150,75,75,0.2) !important;
 }
 
 div.logo-tag {
@@ -49,16 +53,20 @@ div.logo-tag {
   display: block;
   margin-left: auto;
   margin-right: auto;
+
 }
 
 .front-image{
-
+    margin-top: -75px;
     width: 100%;
-    height: 350px;
-    overflow: hidden;
+    height: 400px;
+    overflow-y:hidden;
+    border-bottom: 12px rgba(10,0,0,0.9) solid;
+
 }
 .front-image img{
     margin-top: -75px;
+
 }
 
 .front-three{
